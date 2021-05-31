@@ -4,7 +4,7 @@ public class BookService {
     public void filterBookByGenre(Book[] bookList, Genre genre) {
         for (Book book : bookList) {
             for (Genre genreFromBook : book.getGenres()) {
-                if (genreFromBook.getAttributeOfGenre().equals(genre.getAttributeOfGenre())) {
+
                     if (genreFromBook.equals(genre)) {
                         System.out.println("Книга - " + book.getTitle() + " подходит под данный фильтр: жанр - " + genre.getGenreName());
                         break;
@@ -17,6 +17,6 @@ public class BookService {
             }
         }
     }
-}
+
 
 
